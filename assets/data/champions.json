@@ -1,0 +1,30 @@
+{
+    "top": [
+        { "name": "Irelia", "status": "" },
+        { "name": "Camille", "status": "new" },
+        { "name": "Darius", "status": "" },
+        { "name": "Jax", "status": "" },
+        { "name": "Renekton", "status": "soon" }
+    ],
+    "jg": [
+        { "name": "LeeSin", "status": "upd" },
+        { "name": "Viego", "status": "" },
+        { "name": "Kayn", "status": "" }
+    ],
+    "mid": [
+        { "name": "Ahri", "status": "" },
+        { "name": "Yasuo", "status": "" },
+        { "name": "Yone", "status": "" },
+        { "name": "Zed", "status": "upd" }
+    ],
+    "adc": [
+        { "name": "Ezreal", "status": "" },
+        { "name": "Jinx", "status": "" },
+        { "name": "Kaisa", "status": "new" }
+    ],
+    "sup": [
+        { "name": "Janna", "status": "" },
+        { "name": "Thresh", "status": "upd" },
+        { "name": "Lulu", "status": "" }
+    ]
+}

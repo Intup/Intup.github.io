@@ -213,3 +213,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+async function renderChampions() {
+    try {
+        const response = await fetch('assets/data/champions.json');
+        const data = await response.json();
+ 
+        for (const [lane, champions] of Object.entries(data)) {
+            const gridContainer = document.getElementById(`grid-${lane}`);
+            
+            if (gridContainer) {
+                const laneHTML = champions.map(champ => {
+                    let badgeHTML = '';
+                    //if (champ.status === 'hot') badgeHTML = '<span class="badge hot">HOT</span>';
+                    if (champ.status === 'new') badgeHTML = '<span class="badge new">NEW</span>';
+                    if (champ.status === 'upd') badgeHTML = '<span class="badge upd">UPDATED</span>';
+                    if (champ.status === 'soon') badgeHTML = '<span class="badge upd">SOON</span>';
+
+                    return `
+                        <div class="champ-card" data-name="${champ.name}" data-status="${champ.status || 'normal'}">
+                            ${badgeHTML}
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/${champ.name}.png" class="champ-img" alt="${champ.name}">
+                            <div class="champ-name">${champ.name}</div>
+                        </div>
+                    `;
+                }).join('');
+ 
+                gridContainer.innerHTML = laneHTML;
+            }
+        }
+        
+        console.log("Campeões renderizados com sucesso!");
+
+    } catch (error) {
+        console.error("Erro ao carregar campeões:", error);
+    }
+}
+ 
+document.addEventListener('DOMContentLoaded', async () => {
+
+    await renderChampions();
+    fetchStatus();
+    loadChangelogs();
+
+    const cards = document.querySelectorAll('.champ-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const name = card.getAttribute('data-name');
+            const img = card.querySelector('.champ-img').src;
+            openModal(name, img);
+        });
+    });
+});
