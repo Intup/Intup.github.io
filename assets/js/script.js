@@ -238,6 +238,7 @@ async function renderChampions() {
                     if (champ.status === 'new') badgeHTML = '<span class="badge new">NEW</span>';
                     if (champ.status === 'upd') badgeHTML = '<span class="badge upd">UPDATED</span>';
                     if (champ.status === 'soon') badgeHTML = '<span class="badge soon">SOON</span>';
+                    if (champ.status === 'Outdated') badgeHTML = '<span class="badge hot">Outdated</span>';
 
                     return `
                         <div class="champ-card" data-name="${champ.name}" data-status="${champ.status || 'normal'}">
