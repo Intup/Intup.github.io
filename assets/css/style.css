@@ -40,7 +40,7 @@ header {
 }
 
 .logo-img {
-    max-height: 80px; 
+    max-height: 180px; 
     margin-bottom: 15px;
     display: block;
     margin-left: auto;
@@ -447,4 +447,33 @@ h1 span { color: var(--blue-accent); }
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+ 
+.nunu-message {
+    display: flex;             
+    align-items: center;   
+    justify-content: center;   
+    gap: 20px;                
+    padding: 20px;
+    text-align: left;          
+}
+
+.nunu-icon {
+    width: 80px;              
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(11, 196, 226, 0.3));  
+    animation: float 3s ease-in-out infinite;  
+}
+
+.nunu-message p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+ 
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }

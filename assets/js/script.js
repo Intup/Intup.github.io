@@ -171,7 +171,7 @@ function openModal(champName, imgUrl) {
             const entryHtml = `
                 <div class="log-entry">
                     <div class="log-meta">
-                        <span>DATA: ${log.date}</span>
+                        <span>DATE: ${log.date}</span>
                         <span>V.${log.version || '---'}</span>
                     </div>
                     <ul class="log-list">
@@ -182,7 +182,12 @@ function openModal(champName, imgUrl) {
             listContainer.insertAdjacentHTML('beforeend', entryHtml);
         });
     } else {
-        listContainer.innerHTML = '<p style="color: #64748b; text-align: center;">Nenhum registro de alteração recente.</p>';
+       listContainer.innerHTML = `
+            <div class="nunu-message">
+                <img src="nunu.png" alt="Nunu" class="nunu-icon">
+                <p>Whoops, looks like Nunu ate this champ’s logs.<br>Don’t worry!! The info will be here soon!</p>
+            </div>
+        `;
     }
     modal.style.display = 'flex';
 }
