@@ -1,6 +1,6 @@
 {
     "top": [
-        { "name": "Riven", "status": "" },
+        { "name": "Ambessa", "status": "" },
         { "name": "Camille", "status": "" },
         { "name": "Chogath", "status": "" },
         { "name": "Darius", "status": "" },
@@ -22,7 +22,7 @@
         { "name": "Olaf", "status": "" },
         { "name": "Poppy", "status": "" },
         { "name": "Quinn", "status": "" },
-        { "name": "Renekton", "status": "" },
+        { "name": "Renekton", "status": "soon" },
         { "name": "Rumble", "status": "" },
         { "name": "Sett", "status": "" },
         { "name": "Sion", "status": "" },
@@ -33,10 +33,7 @@
         { "name": "Tryndamere", "status": "" },
         { "name": "Urgot", "status": "" },
         { "name": "Volibear", "status": "" },
-        { "name": "Yorick", "status": "" },
-        { "name": "Aatrox", "status": "" },
-        { "name": "Warwick", "status": "" },
-        { "name": "Pantheon", "status": "" }
+        { "name": "Yorick", "status": "" }
     ],
     "jg": [
         { "name": "Amumu", "status": "" },
@@ -62,7 +59,7 @@
         { "name": "Nunu", "status": "" },
         { "name": "Nidalee", "status": "" },
         { "name": "Nocturne", "status": "" },
-        { "name": "Rammus", "status": "" },
+        { "name": "RekSai", "status": "" },
         { "name": "Rengar", "status": "" },
         { "name": "Sejuani", "status": "" },
         { "name": "Shyvana", "status": "" },
@@ -71,8 +68,7 @@
         { "name": "Vi", "status": "" },
         { "name": "Viego", "status": "" },
         { "name": "XinZhao", "status": "" },
-        { "name": "Zac", "status": "" },
-        { "name": "Zed", "status": "" }
+        { "name": "Warwick", "status": "" }
     ],
     "mid": [
         { "name": "Ahri", "status": "" },
@@ -80,7 +76,7 @@
         { "name": "Annie", "status": "" },
         { "name": "Anivia", "status": "" },
         { "name": "Aurora", "status": "" },
-        { "name": "Azir", "status": "" },
+        { "name": "Brand", "status": "" },
         { "name": "Cassiopeia", "status": "" },
         { "name": "Corki", "status": "" },
         { "name": "Fizz", "status": "" },
@@ -90,12 +86,12 @@
         { "name": "Leblanc", "status": "" },
         { "name": "Lux", "status": "" },
         { "name": "Malzahar", "status": "" },
-        { "name": "Naafiri", "status": "" },
+        { "name": "Mel", "status": "" },
         { "name": "Orianna", "status": "" },
-        { "name": "Qiyana", "status": "" },
+        { "name": "Qiyana", "status": "soon" },
         { "name": "Ryze", "status": "" },
         { "name": "Sylas", "status": "" },
-        { "name": "Syndra", "status": "" },
+        { "name": "Syndra", "status": "Outdated" },
         { "name": "Talon", "status": "" },
         { "name": "TwistedFate", "status": "" },
         { "name": "Veigar", "status": "" },
@@ -105,8 +101,9 @@
         { "name": "Xerath", "status": "" },
         { "name": "Yasuo", "status": "" },
         { "name": "Yone", "status": "" },
-        { "name": "Zoe", "status": "" },
-        { "name": "Ziggs", "status": "" }
+        { "name": "Zed", "status": "" },
+        { "name": "Ziggs", "status": "" },
+        { "name": "Pantheon", "status": "" }
     ],
     "adc": [
         { "name": "Ashe", "status": "" },
@@ -129,11 +126,12 @@
         { "name": "Varus", "status": "" },
         { "name": "Vayne", "status": "" },
         { "name": "Xayah", "status": "" },
+        { "name": "Yunara", "status": "" },
         { "name": "Zeri", "status": "" }
     ],
     "sup": [
         { "name": "Alistar", "status": "" },
-        { "name": "Bard", "status": "" },
+        { "name": "Bard", "status": "soon" },
         { "name": "Janna", "status": "" },
         { "name": "Karma", "status": "" },
         { "name": "Leona", "status": "" },

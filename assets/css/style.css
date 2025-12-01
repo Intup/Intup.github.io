@@ -13,7 +13,7 @@
     --text-muted: #8b9bb4;
 
     --tag-new: #a855f7;
-    --tag-hot: #ef4444;
+    --tag-soon: #ef4444;
     --tag-upd: #10b981;
 }
 
@@ -248,7 +248,8 @@ h1 span { color: var(--blue-accent); }
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 .badge.new { background-color: var(--tag-new); }  
-.badge.hot { background-color: var(--tag-hot); }  
+/* .badge.hot { background-color: var(--tag-hot); }  */
+.badge.soon { background-color: var(--tag-soon); }  
 .badge.upd { background-color: var(--tag-upd); }
 
  

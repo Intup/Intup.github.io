@@ -228,13 +228,16 @@ async function renderChampions() {
         for (const [lane, champions] of Object.entries(data)) {
             const gridContainer = document.getElementById(`grid-${lane}`);
             
+            //XD 
+            champions.sort((a, b) => a.name.localeCompare(b.name));
+
             if (gridContainer) {
                 const laneHTML = champions.map(champ => {
                     let badgeHTML = '';
                     //if (champ.status === 'hot') badgeHTML = '<span class="badge hot">HOT</span>';
                     if (champ.status === 'new') badgeHTML = '<span class="badge new">NEW</span>';
                     if (champ.status === 'upd') badgeHTML = '<span class="badge upd">UPDATED</span>';
-                    if (champ.status === 'soon') badgeHTML = '<span class="badge upd">SOON</span>';
+                    if (champ.status === 'soon') badgeHTML = '<span class="badge soon">SOON</span>';
 
                     return `
                         <div class="champ-card" data-name="${champ.name}" data-status="${champ.status || 'normal'}">
