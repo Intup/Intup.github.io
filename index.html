@@ -1,57 +1,85 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XNX AIO - Supported Champions</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <div class="container">
-        <header>
+        <header class="relative-header">
+           <div class="patch-widget">
+                <div class="widget-title">
+                    <span class="pulse-dot"></span> SYSTEM STATUS
+                </div>
+                
+                <div class="patch-list" id="patch-list-container">
+                    
+                    <div style="padding: 15px; text-align: center; color: #64748b; font-size: 0.8rem;">
+                        Verifying versions...
+                    </div>
+
+                </div>
+            </div>
+                        
+            <img src="./xnx-logo.svg" alt="XNX Logo" class="logo-img" href="https://xnx.gg">
+            
             <h1>XNX <span>AIO</span></h1>
-            <p style="color: #64748b; margin-bottom: 20px;">Champion Scripts</p>
-            <input type="text" id="searchInput" class="search-bar" placeholder="Search champion (ex: Ezreal)..." onkeyup="filterChamps()">
+            
+            <div class="controls-area">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search champion (ex: Ezreal)...">
+                
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterStatus('all', this)">All Status</button>
+                    <button class="filter-btn" onclick="filterStatus('new', this)">New</button>
+                    <button class="filter-btn" onclick="filterStatus('hot', this)">Rework</button>
+                    <button class="filter-btn" onclick="filterStatus('upd', this)">Updated</button>
+                </div>
+
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterLane('all', this)">ALL Lanes</button>
+                    <button class="filter-btn" onclick="filterLane('top', this)">TOP</button>
+                    <button class="filter-btn" onclick="filterLane('jg', this)">JUNGLE</button>
+                    <button class="filter-btn" onclick="filterLane('mid', this)">MID</button>
+                    <button class="filter-btn" onclick="filterLane('adc', this)">ADC</button>
+                    <button class="filter-btn" onclick="filterLane('sup', this)">SUPORTE</button>
+                </div>
+            </div>
         </header>
 
         <div class="role-section" id="top">
-            <div class="section-title">
-                TOP
-                <span class="section-meta">SOLO LANE</span>
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">TOP</div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="champ-grid">
-                <div class="champ-card" data-name="Irelia">
+                <div class="champ-card" data-name="Irelia" data-status="hot">
                     <!-- <span class="badge hot">HOT</span>  -->
                     <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Irelia.png" class="champ-img">
                     <div class="champ-name">Irelia</div>
                 </div>
-
-                <div class="champ-card" data-name="Camille">
-                    <!-- <span class="badge new">NEW</span> -->
+                <div class="champ-card" data-name="Camille" data-status="new">
+                    <span class="badge new">NEW</span>
                     <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Camille.png" class="champ-img">
                     <div class="champ-name">Camille</div>
                 </div>
-
                 <div class="champ-card" data-name="Darius">
                     <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Darius.png" class="champ-img">
                     <div class="champ-name">Darius</div>
-                </div>
-                
-                <div class="champ-card" data-name="Jax">
-                    <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Jax.png" class="champ-img">
-                    <div class="champ-name">Jax</div>
                 </div>
             </div>
         </div>
 
         <div class="role-section" id="jg">
-            <div class="section-title">
-                JUNGLE
-                <span class="section-meta">FOREST</span>
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">JUNGLE</div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="champ-grid">
-                <div class="champ-card" data-name="LeeSin">
+                <div class="champ-card" data-name="LeeSin" data-status="upd">
                     <span class="badge upd">UPD</span>
                     <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/LeeSin.png" class="champ-img">
                     <div class="champ-name">Lee Sin</div>
@@ -64,9 +92,9 @@
         </div>
 
         <div class="role-section" id="mid">
-            <div class="section-title">
-                MID
-                <span class="section-meta">MAGES & ASSASSINS</span>
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">MID</div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="champ-grid">
                 <div class="champ-card" data-name="Ahri">
@@ -85,12 +113,12 @@
         </div>
 
         <div class="role-section" id="adc">
-            <div class="section-title">
-                ADC
-                <span class="section-meta">MARKSMAN</span>
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">ADC</div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
             </div>
             <div class="champ-grid">
-                <div class="champ-card" data-name="Ezreal">
+                <div class="champ-card" data-name="Ezreal" data-status="hot">
                     <span class="badge hot">HOT</span>
                     <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Ezreal.png" class="champ-img">
                     <div class="champ-name">Ezreal</div>
@@ -98,6 +126,21 @@
                 <div class="champ-card" data-name="Jinx">
                     <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Jinx.png" class="champ-img">
                     <div class="champ-name">Jinx</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="role-section" id="sup">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">SUP</div>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="champ-grid">
+                <div class="champ-card" data-name="Janna">
+                    <!-- <span class="badge hot">HOT</span> -->
+                    <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/Janna.png" class="champ-img">
+                    <div class="champ-name">Janna</div>
                 </div>
             </div>
         </div>
