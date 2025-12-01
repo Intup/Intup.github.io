@@ -184,7 +184,7 @@ function openModal(champName, imgUrl) {
     } else {
        listContainer.innerHTML = `
             <div class="nunu-message">
-                <img src="nunu.png" alt="Nunu" class="nunu-icon">
+                <img src="assets/nunu.png" alt="Nunu" class="nunu-icon">
                 <p>Whoops, looks like Nunu ate this champ’s logs.<br>Don’t worry!! The info will be here soon!</p>
             </div>
         `;
@@ -219,6 +219,12 @@ async function renderChampions() {
         const response = await fetch('assets/data/champions.json');
         const data = await response.json();
  
+        const riotResponse = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
+        if (!riotResponse.ok) throw new Error(`Erro Riot: ${riotResponse.status}`);
+        
+        const riotVersions = await riotResponse.json();
+        const currentLolPatch = riotVersions[0]; 
+
         for (const [lane, champions] of Object.entries(data)) {
             const gridContainer = document.getElementById(`grid-${lane}`);
             
@@ -233,7 +239,7 @@ async function renderChampions() {
                     return `
                         <div class="champ-card" data-name="${champ.name}" data-status="${champ.status || 'normal'}">
                             ${badgeHTML}
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/${champ.name}.png" class="champ-img" alt="${champ.name}">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/${currentLolPatch}/img/champion/${champ.name}.png" class="champ-img" alt="${champ.name}">
                             <div class="champ-name">${champ.name}</div>
                         </div>
                     `;

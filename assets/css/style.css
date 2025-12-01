@@ -8,7 +8,7 @@
     --blue-dim: #0ac8b9;
     
     --border-gold: #a3814a;
-    --border-dim: #1e2328;
+    --border-dim: #044280;
     --text-primary: #f0f6fc;
     --text-muted: #8b9bb4;
 
@@ -88,7 +88,7 @@ h1 span { color: var(--blue-accent); }
 
 .filter-btn {
     background: transparent;
-    border: 1px solid var(--border-dim);
+    border: 2px solid var(--border-dim);
     color: var(--text-muted);
     padding: 8px 16px;
     border-radius: 4px;
@@ -96,7 +96,18 @@ h1 span { color: var(--blue-accent); }
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s;
+    transition: all 0.6s;
+
+    display: inline-flex;    
+    align-items: center;      
+    justify-content: center;  
+    gap: 8px;
+}
+
+.filter-icon {
+    width: 16px;        
+    height: 16px;
+    object-fit: contain;
 }
 
 .filter-btn:hover { border-color: var(--gold-primary); color: var(--gold-primary); }
@@ -142,6 +153,14 @@ h1 span { color: var(--blue-accent); }
     letter-spacing: 2px;
     display: flex;
     align-items: center;
+}
+
+.role-icon {
+    width: 24px;               
+    height: 24px;
+    margin-right: 12px;       
+    object-fit: contain;       
+    filter: drop-shadow(0 0 1px rgba(200, 170, 110, 0.8));
 }
 
 .toggle-icon {
