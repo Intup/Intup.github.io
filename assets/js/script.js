@@ -1,6 +1,7 @@
 let currentLane = 'all';
 let currentStatus = 'all';
 let currentSearch = '';
+let changelogData = {};
 
 function toggleSection(headerElement) {
     const section = headerElement.parentElement;
@@ -137,3 +138,73 @@ async function fetchStatus() {
     }
 }
 document.addEventListener('DOMContentLoaded', fetchStatus);
+
+ 
+ 
+async function loadChangelogs() {
+    try {
+        const response = await fetch('assets/data/changelogs.json');
+        if (!response.ok) throw new Error("Json não encontrado");
+        changelogData = await response.json();
+        console.log("Changelogs carregados!");
+    } catch (error) {
+        console.error("Erro ao carregar changelogs:", error);
+    }
+}
+
+function openModal(champName, imgUrl) {
+    const modal = document.getElementById('changelogModal');
+    const title = document.getElementById('modalTitle');
+    const img = document.getElementById('modalChampImg');
+    const listContainer = document.getElementById('modalList');
+    title.innerText = champName;
+    img.src = imgUrl;
+    listContainer.innerHTML = '';
+
+    if (changelogData[champName]) {
+        changelogData[champName].forEach(log => {
+            let changesHtml = '';
+            log.changes.forEach(change => {
+                changesHtml += `<li>${change}</li>`;
+            });
+
+            const entryHtml = `
+                <div class="log-entry">
+                    <div class="log-meta">
+                        <span>DATA: ${log.date}</span>
+                        <span>V.${log.version || '---'}</span>
+                    </div>
+                    <ul class="log-list">
+                        ${changesHtml}
+                    </ul>
+                </div>
+            `;
+            listContainer.insertAdjacentHTML('beforeend', entryHtml);
+        });
+    } else {
+        listContainer.innerHTML = '<p style="color: #64748b; text-align: center;">Nenhum registro de alteração recente.</p>';
+    }
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('changelogModal').style.display = 'none';
+}
+
+document.getElementById('changelogModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchStatus();     
+    loadChangelogs();   
+    const cards = document.querySelectorAll('.champ-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const name = card.getAttribute('data-name');
+            const img = card.querySelector('.champ-img').src;
+            openModal(name, img);
+        });
+    });
+});

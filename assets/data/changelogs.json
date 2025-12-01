@@ -1,0 +1,30 @@
+{
+  "Ezreal": [
+    {
+      "date": "01/12/2025",
+      "version": "0.2",
+      "changes": [
+        "Added Q logic through minions.",
+        "Fixed bug in the E + Q combo.",
+        "Removed unnecessary delay in Auto Attack."
+      ]
+    },
+    {
+      "date": "15/08/2025",
+      "version": "0.1",
+      "changes": [
+        "Improved prediction of Ultimate (R)."
+      ]
+    }
+  ],
+  "Irelia": [
+    {
+      "date": "28/08/2025",
+      "version": "0.1",
+      "changes": [
+        "Q logic reset completely rewritten.",
+        "Fixed 'Fast Clear' na Jungle."
+      ]
+    }
+  ]
+}
