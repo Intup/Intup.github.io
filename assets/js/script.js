@@ -139,8 +139,6 @@ async function fetchStatus() {
 }
 document.addEventListener('DOMContentLoaded', fetchStatus);
 
- 
- 
 async function loadChangelogs() {
     try {
         const response = await fetch('assets/data/changelogs.json');

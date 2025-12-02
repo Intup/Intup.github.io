@@ -256,6 +256,7 @@ h1 span { color: var(--blue-accent); }
  
 .relative-header {
     position: relative; 
+    overflow: hidden;
 }
 
 .patch-widget {
@@ -497,4 +498,38 @@ h1 span { color: var(--blue-accent); }
     0% { transform: translateY(0px); }
     50% { transform: translateY(-5px); }
     100% { transform: translateY(0px); }
+}
+
+.special-gif {
+    position: absolute;
+    bottom: -15px;   
+    left: 1%;    
+    max-height: 160px;  
+    width: auto;      
+    z-index: 10;  
+    pointer-events: none; 
+    animation: fadeIn 1s ease;
+}
+
+@media (max-width: 900px) {
+    .special-gif {
+        display: none;
+    }
+}
+
+.special-gif-right {
+    position: absolute;
+    bottom: -6px;   
+    right: 2%;   
+    max-height: 160px; 
+    width: auto;       
+    z-index: 10; 
+    pointer-events: none; 
+    animation: fadeIn 1s ease;
+}
+
+@media (max-width: 900px) {
+    .special-gif-right {
+        display: none;
+    }
 }
