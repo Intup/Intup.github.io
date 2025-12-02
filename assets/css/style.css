@@ -568,3 +568,57 @@ h1 span { color: var(--blue-accent); }
         display: none;
     }
 }
+
+@media (max-width: 900px) {
+    body {
+        height: auto !important;
+        overflow-y: auto !important; 
+        display: block; 
+    }
+
+    .container {
+        height: auto !important;
+        display: block; 
+        overflow: visible;
+    }
+
+  
+    header {
+        position: relative;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .scroll-content {
+        overflow-y: visible !important;
+        height: auto !important;
+        padding-right: 0;
+    }
+   
+    .logo-img {
+        max-height: 90px; 
+    }
+
+    h1 {
+        font-size: 1.8rem; 
+        margin-bottom: 15px;
+    }
+
+    .filter-group {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    
+    .patch-widget {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        top: auto;
+        right: auto;
+        border-top: 1px solid var(--border-gold); 
+    }
+}
