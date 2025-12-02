@@ -146,9 +146,8 @@ async function loadChangelogs() {
         const response = await fetch('assets/data/changelogs.json');
         if (!response.ok) throw new Error("Json não encontrado");
         changelogData = await response.json();
-        console.log("Changelogs carregados!");
     } catch (error) {
-        console.error("Erro ao carregar changelogs:", error);
+        console.error("Error changelogs:", error);
     }
 }
 
@@ -253,10 +252,8 @@ async function renderChampions() {
             }
         }
         
-        console.log("Campeões renderizados com sucesso!");
-
     } catch (error) {
-        console.error("Erro ao carregar campeões:", error);
+        console.error("Error loading champions:", error);
     }
 }
  
