@@ -26,5 +26,14 @@
         "Fixed 'Fast Clear' in Jungle."
       ]
     }
+  ],
+   "Zaahen": [
+    {
+      "date": "12/18/2025",
+      "version": "0.1",
+      "changes": [
+        "Released [BETA]"
+      ]
+    }
   ]
 }
