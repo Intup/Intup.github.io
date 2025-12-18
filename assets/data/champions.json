@@ -35,7 +35,7 @@
         { "name": "Volibear", "status": "" },
         { "name": "Yorick", "status": "" },
         { "name": "Gangplank", "status": "soon"},
-        { "name": "Zaahen", "status": "soon"}
+        { "name": "Zaahen", "status": "new"}
     ],
     "jg": [
         { "name": "Amumu", "status": "" },
