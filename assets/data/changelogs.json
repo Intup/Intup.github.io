@@ -35,6 +35,16 @@
       "changes": [
         "Released [BETA]"
       ]
+    },
+    {
+      "date": "12/19/2025",
+      "version": "0.2",
+      "changes": [
+        "Improvements to W's prediction",
+        "Fixed W range issue.",
+        "Added new conditions for E. The 'E | Engage' option can be disabled in the menu.", 
+        "Now the E animation resets correctly along with the Hydra/Tiamat item."
+      ]
     }
   ]
   
