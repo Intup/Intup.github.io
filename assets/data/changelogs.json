@@ -35,6 +35,15 @@
       "changes": [
         "Recompiled | Use AegisIO."
       ]
+    },
+
+     {
+      "date": "12/20/2025",
+      "version": "0.2",
+      "changes": [
+        "Removed old OnAnimation callback.",
+        "Resolved AA + Q issue."
+      ]
     }
   ],
 
