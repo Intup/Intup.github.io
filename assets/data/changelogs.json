@@ -28,6 +28,17 @@
     }
   ],
 
+   "Gangplank": [
+    {
+      "date": "12/21/2025",
+      "version": "0.1",
+      "changes": [
+        "Simple Gangplank release."
+      ]
+    }
+  ],
+
+
   "Riven": [
     {
       "date": "12/20/2025",
