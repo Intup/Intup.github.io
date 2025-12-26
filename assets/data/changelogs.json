@@ -58,6 +58,16 @@
     }
   ],
 
+  "Vayne": [
+    {
+       "date": "12/25/2025",
+      "version": "0.2",
+      "changes": [
+        "Fixed Anti-Gap for champions that were not appearing as options in the menu."
+      ]
+    }
+  ],
+
   "Zaahen": [
     {
       "date": "12/18/2025",
