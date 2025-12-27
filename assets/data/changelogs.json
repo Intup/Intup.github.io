@@ -194,14 +194,132 @@
       "Adjusted ultimate execution checks."
     ]
   }
-]
+],
+
+"Camille": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved Q true damage timing.",
+      "Fixed E wall detection in edge cases.",
+      "Added basic R engage logic."
+    ]
+  }
+],
+
+"Fiora": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Vital detection logic implemented.(API BROKEN)",
+      "Improved Q harass prioritization.",
+      "Fixed W usage against hard CC.",
+      "Optimized R vital rotation logic."
+    ]
+  }
+],
 
 
+"Malphite": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Fixed Damage.(API BROKEN)"
+    ]
+  }
+],
 
+  "Taliyah": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved Q prediction against moving targets.",
+        "Optimized W + E combo timing.",
+        "Fixed issue where W would fail near terrain edges."
+      ]
+    },
+    {
+      "date": "12/20/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed bugs with prediction."
+      ]
+    }
+  ],
 
+  "XinZhao": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved E gap-close target selection.",
+        "Fixed R usage when enemies are already out of range.",
+        "Adjusted combo flow to better sync with Q knock-up.",
+        "Bug fixes in jungle clear logic. (AGAIN)"
+      ]
+    },
+    {
+      "date": "12/18/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed Jungle Clear"
+      ]
+    }
+  ],
 
+  "Warwick": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved Ultimate (R) hit prediction.",
+        "Better decision making for low-health enemy chase.",
+        "Minor fixes in jungle clear priority."
+      ]
+    },
+    {
+      "date": "12/19/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed radar (API BROKEN)"
+      ]
+    }
+  ],
 
+  "Anivia": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved Q stun prediction.",
+        "Fixed R toggle logic when target leaves range.",
+        "Optimized mana usage during lane clear.",
+        "Minor bug fixes in wall (W) placement."
+      ]
+    },
+    {
+      "date": "12/21/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed Combo."
+      ]
+    }
+  ],
 
-  
-  
+  "Sylas": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved E2 hit prediction.",
+        "Fixed combo interruption after E + W.",
+        "Better Ultimate (R) target selection logic.",
+        "General stability improvements."
+      ]
+    }
+  ]
 }
