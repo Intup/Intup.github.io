@@ -1,4 +1,16 @@
 {
+  "Morgana": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved Q prediction against moving targets.",
+      "Fixed E shield priority logic.",
+      "Adjusted R usage timing in team fights."
+    ]
+  }
+],
+
   "Ezreal": [
     {
       "date": "12/1/2025",
@@ -95,7 +107,101 @@
       "changes": [
         "Fixed shadow issues temporarily."
       ]
+    },
+
+     {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+      "Improved shadow positioning logic.",
+      "Fixed delayed Q casts after W.",
+      "Adjusted R follow-up damage calculation."
+      ]
     }
-  ]
+  ],
+
+  "Yasuo": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Added dash tracking logic.",
+      "Improved Q cast timing after E.",
+      "Fixed R usage when multiple targets are airborne.",
+      "Reduced wasted wind wall casts. (API Broken)"
+    ]
+  }
+  ],
+
+  "Jinx": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved rocket launcher toggle logic.",
+      "Fixed W prediction at max range.",
+      "Adjusted R usage to avoid overkill.",
+      "Optimized target selection in team fights."
+    ]
+  }
+],
+
+"Thresh": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved hook prediction logic.",
+      "Added lantern ally priority system.",
+      "Fixed E flay direction issues.",
+      "Optimized combo timing after hook hit."
+    ]
+  }
+],
+
+"Lux": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved E zoning logic.",
+      "Adjusted Q prediction against dashes.",
+      "Fixed R casting delay issues.",
+      "Optimized combo damage calculation."
+    ]
+  }
+],
+
+"Graves": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Initial Graves jungle logic.",
+      "Improved E repositioning during combat.",
+      "Fixed Q wall collision detection.",
+      "Adjusted R usage for kill secure."
+    ]
+  }
+],
+
+"Darius": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved Q spacing logic for optimal heal.",
+      "Adjusted ultimate execution checks."
+    ]
+  }
+]
+
+
+
+
+
+
+
+  
   
 }
