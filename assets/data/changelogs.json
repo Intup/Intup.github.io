@@ -360,7 +360,17 @@
       "Optimized mana usage in harass mode."
     ]
   }
-]
+], 
 
+"Rengar": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Fixed prioritization sequence in jungle clear.",
+      "Now the combo sequence is based on level."
+    ]
+  }
+]
 
 }
