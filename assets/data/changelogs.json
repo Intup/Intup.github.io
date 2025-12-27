@@ -321,5 +321,46 @@
         "General stability improvements."
       ]
     }
-  ]
+  ],
+
+  "Xerath": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Fixed Q and R in Harass & Combo"
+    ]
+  },
+  {
+    "date": "12/27/2025",
+    "version": "0.2",
+    "changes": [
+      "Improved Q charge timing accuracy.",
+      "Fixed stun duration mismatch on E.",
+      "Optimized R target selection logic.",
+      "Minor performance improvements in combo mode."
+    ]
+  }
+],
+"Viktor": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Added Q poke and shield logic.",
+      "Implemented E laser positioning and prediction.(FIXED)"
+    ]
+  },
+  {
+    "date": "12/27/2025",
+    "version": "0.2",
+    "changes": [
+      "Improved E laser accuracy on moving targets.",
+      "Fixed R follow logic not tracking targets correctly.",
+      "Optimized mana usage in harass mode."
+    ]
+  }
+]
+
+
 }
