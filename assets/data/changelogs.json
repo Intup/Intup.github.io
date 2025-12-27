@@ -368,7 +368,7 @@
     "version": "0.1",
     "changes": [
       "Fixed prioritization sequence in jungle clear.",
-      "Now the combo sequence is based on level."
+      "Now the combo sequence speed is based on level."
     ]
   }
 ]
