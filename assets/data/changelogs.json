@@ -371,6 +371,17 @@
       "Now the combo sequence speed is based on level."
     ]
   }
+],
+
+"Corki": [
+  {
+    "date": "12/29/2025",
+    "version": "0.1",
+    "changes": [
+      "New options for 'Range' and 'Prediction' (Misc. > Range | Misc. > Prediction)",
+      "Improvements in prediction."
+    ]
+  }
 ]
 
 }
