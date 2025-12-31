@@ -67,6 +67,16 @@
         "Removed old OnAnimation callback.",
         "Resolved AA + Q issue."
       ]
+    }, 
+
+    {
+      "date": "12/31/2025",
+      "version": "0.3",
+      "changes": [
+        "Added new Fast Q logic for Riven.",
+        "Added new option for combo (Only Q in combo).",
+        "Improvements have been made"
+      ]
     }
   ],
 
@@ -380,6 +390,16 @@
     "changes": [
       "New options for 'Range' and 'Prediction' (Misc. > Range | Misc. > Prediction)",
       "Improvements in prediction."
+    ]
+  }
+],
+
+"KogMaw": [
+  {
+    "date": "12/31/2025",
+    "version": "0.1",
+    "changes": [
+      "Improvements to R's Prediction"
     ]
   }
 ]
