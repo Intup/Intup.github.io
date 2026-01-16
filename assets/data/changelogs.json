@@ -50,6 +50,17 @@
     }
   ],
 
+  
+   "AurelionSol": [
+    {
+      "date": "01/16/2026",
+      "version": "0.1",
+      "changes": [
+        "Simple AurelionSol release."
+      ]
+    }
+  ],
+
 
   "Riven": [
     {
