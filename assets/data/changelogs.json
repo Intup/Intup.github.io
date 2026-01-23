@@ -1,0 +1,441 @@
+{
+  "Morgana": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved Q prediction against moving targets.",
+      "Fixed E shield priority logic.",
+      "Adjusted R usage timing in team fights."
+    ]
+  }
+],
+
+  "Ezreal": [
+    {
+      "date": "12/1/2025",
+      "version": "0.2",
+      "changes": [
+        "Added Q logic through minions.",
+        "Fixed bug in the E + Q combo.",
+        "Removed unnecessary delay in Auto Attack."
+      ]
+    },
+    {
+      "date": "8/15/2025",
+      "version": "0.1",
+      "changes": [
+        "Improved prediction of Ultimate (R)."
+      ]
+    }
+  ],
+  "Irelia": [
+    {
+      "date": "8/28/2025",
+      "version": "0.1",
+      "changes": [
+        "Q logic reset completely rewritten.",
+        "Fixed 'Fast Clear' in Jungle."
+      ]
+    },
+
+     {
+      "date": "1/18/2026",
+      "version": "0.2",
+      "changes": [
+        "Add new logic so that",
+        "Added Bridge logic",
+        "Added new informative drawings.",
+        "Ready to replace old logic."
+      ]
+    }
+  ],
+
+   "Gangplank": [
+    {
+      "date": "12/21/2025",
+      "version": "0.1",
+      "changes": [
+        "Simple Gangplank release."
+      ]
+    }
+  ],
+
+  
+   "AurelionSol": [
+    {
+      "date": "1/16/2026",
+      "version": "0.1",
+      "changes": [
+        "Simple AurelionSol release."
+      ]
+    }
+  ],
+
+
+  "Riven": [
+    {
+      "date": "12/20/2025",
+      "version": "0.1",
+      "changes": [
+        "Recompiled | Use AegisIO."
+      ]
+    },
+
+     {
+      "date": "12/20/2025",
+      "version": "0.2",
+      "changes": [
+        "Removed old OnAnimation callback.",
+        "Resolved AA + Q issue."
+      ]
+    }, 
+
+    {
+      "date": "12/31/2025",
+      "version": "0.3",
+      "changes": [
+        "Added new Fast Q logic for Riven.",
+        "Added new option for combo (Only Q in combo).",
+        "Improvements have been made"
+      ]
+    }
+  ],
+
+  "Vayne": [
+    {
+       "date": "12/25/2025",
+      "version": "0.2",
+      "changes": [
+        "Fixed Anti-Gap for champions that were not appearing as options in the menu."
+      ]
+    }
+  ],
+
+  "Zaahen": [
+    {
+      "date": "12/18/2025",
+      "version": "0.1",
+      "changes": [
+        "Released [BETA]"
+      ]
+    },
+    {
+      "date": "12/19/2025",
+      "version": "0.2",
+      "changes": [
+        "Improvements to W's prediction",
+        "Fixed W range issue.",
+        "Added new conditions for E. The 'E | Engage' option can be disabled in the menu.", 
+        "Now the E animation resets correctly along with the Hydra/Tiamat item."
+      ]
+    }
+  ],
+
+  "Zed": [
+    {
+      "date": "12/27/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed shadow issues temporarily."
+      ]
+    },
+
+     {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+      "Improved shadow positioning logic.",
+      "Fixed delayed Q casts after W.",
+      "Adjusted R follow-up damage calculation."
+      ]
+    }
+  ],
+
+  "Yasuo": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Added dash tracking logic.",
+      "Improved Q cast timing after E.",
+      "Fixed R usage when multiple targets are airborne.",
+      "Reduced wasted wind wall casts. (API Broken)"
+    ]
+  }
+  ],
+
+  "Zeri": [
+  {
+    "date": "1/18/2026",
+    "version": "0.1",
+    "changes": [
+      "New HUD for info passive",
+      "Add option to attack conqueror",
+      "Fixed some bugs."
+    ]
+  }
+  ],
+
+  "Jinx": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved rocket launcher toggle logic.",
+      "Fixed W prediction at max range.",
+      "Adjusted R usage to avoid overkill.",
+      "Optimized target selection in team fights."
+    ]
+  }
+],
+
+"Thresh": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved hook prediction logic.",
+      "Added lantern ally priority system.",
+      "Fixed E flay direction issues.",
+      "Optimized combo timing after hook hit."
+    ]
+  }
+],
+
+"Lux": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved E zoning logic.",
+      "Adjusted Q prediction against dashes.",
+      "Fixed R casting delay issues.",
+      "Optimized combo damage calculation."
+    ]
+  }
+],
+
+"Graves": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Initial Graves jungle logic.",
+      "Improved E repositioning during combat.",
+      "Fixed Q wall collision detection.",
+      "Adjusted R usage for kill secure."
+    ]
+  }
+],
+
+"Darius": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved Q spacing logic for optimal heal.",
+      "Adjusted ultimate execution checks."
+    ]
+  }
+],
+
+"Camille": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Improved Q true damage timing.",
+      "Fixed E wall detection in edge cases.",
+      "Added basic R engage logic."
+    ]
+  }
+],
+
+"Fiora": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Vital detection logic implemented.(API BROKEN)",
+      "Improved Q harass prioritization.",
+      "Fixed W usage against hard CC.",
+      "Optimized R vital rotation logic."
+    ]
+  }
+],
+
+
+"Malphite": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Fixed Damage.(API BROKEN)"
+    ]
+  }
+],
+
+  "Taliyah": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved Q prediction against moving targets.",
+        "Optimized W + E combo timing.",
+        "Fixed issue where W would fail near terrain edges."
+      ]
+    },
+    {
+      "date": "12/20/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed bugs with prediction."
+      ]
+    }
+  ],
+
+  "XinZhao": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved E gap-close target selection.",
+        "Fixed R usage when enemies are already out of range.",
+        "Adjusted combo flow to better sync with Q knock-up.",
+        "Bug fixes in jungle clear logic. (AGAIN)"
+      ]
+    },
+    {
+      "date": "12/18/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed Jungle Clear"
+      ]
+    }
+  ],
+
+  "Warwick": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved Ultimate (R) hit prediction.",
+        "Better decision making for low-health enemy chase.",
+        "Minor fixes in jungle clear priority."
+      ]
+    },
+    {
+      "date": "12/19/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed radar (API BROKEN)"
+      ]
+    }
+  ],
+
+  "Anivia": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved Q stun prediction.",
+        "Fixed R toggle logic when target leaves range.",
+        "Optimized mana usage during lane clear.",
+        "Minor bug fixes in wall (W) placement."
+      ]
+    },
+    {
+      "date": "12/21/2025",
+      "version": "0.1",
+      "changes": [
+        "Fixed Combo."
+      ]
+    }
+  ],
+
+  "Sylas": [
+    {
+      "date": "12/27/2025",
+      "version": "0.2",
+      "changes": [
+        "Improved E2 hit prediction.",
+        "Fixed combo interruption after E + W.",
+        "Better Ultimate (R) target selection logic.",
+        "General stability improvements."
+      ]
+    }
+  ],
+
+  "Xerath": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Fixed Q and R in Harass & Combo"
+    ]
+  },
+  {
+    "date": "12/27/2025",
+    "version": "0.2",
+    "changes": [
+      "Improved Q charge timing accuracy.",
+      "Fixed stun duration mismatch on E.",
+      "Optimized R target selection logic.",
+      "Minor performance improvements in combo mode."
+    ]
+  }
+],
+"Viktor": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Added Q poke and shield logic.",
+      "Implemented E laser positioning and prediction.(FIXED)"
+    ]
+  },
+  {
+    "date": "12/27/2025",
+    "version": "0.2",
+    "changes": [
+      "Improved E laser accuracy on moving targets.",
+      "Fixed R follow logic not tracking targets correctly.",
+      "Optimized mana usage in harass mode."
+    ]
+  }
+], 
+
+"Rengar": [
+  {
+    "date": "12/27/2025",
+    "version": "0.1",
+    "changes": [
+      "Fixed prioritization sequence in jungle clear.",
+      "Now the combo sequence speed is based on level."
+    ]
+  }
+],
+
+"Corki": [
+  {
+    "date": "12/29/2025",
+    "version": "0.1",
+    "changes": [
+      "New options for 'Range' and 'Prediction' (Misc. > Range | Misc. > Prediction)",
+      "Improvements in prediction."
+    ]
+  }
+],
+
+"KogMaw": [
+  {
+    "date": "12/31/2025",
+    "version": "0.1",
+    "changes": [
+      "Improvements to R's Prediction"
+    ]
+  }
+]
+
+}

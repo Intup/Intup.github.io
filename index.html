@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XNX AIO - Supported Champions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="relative-header">
+          <div class="controls-area">
+            <img src="assets/gif_of_the_best_teemo_main.gif" alt="" class="special-gif">
+          </div>
+
+          <img src="assets/viktor.gif" alt="" class="special-gif-right">
+     
+           <div class="patch-widget">
+                <div class="widget-title">
+                    <span class="pulse-dot"></span> SYSTEM STATUS
+                </div>
+                
+                <div class="patch-list" id="patch-list-container">
+                    
+                    <div style="padding: 15px; text-align: center; color: #64748b; font-size: 0.8rem;">
+                        Verifying versions...
+                    </div>
+
+                </div>
+            </div>
+                        
+            <img src="./assets/icon/xnx-logo.svg" alt="XNX Logo" class="logo-img" href="https://xnx.gg">
+            
+            <h1>XNX <span>AIO</span></h1>
+            
+            <div class="controls-area">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search champion (ex: Ezreal)...">
+                
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterStatus('all', this)">All Status</button>
+                    <button class="filter-btn" onclick="filterStatus('new', this)">New</button>
+                    <button class="filter-btn" onclick="filterStatus('hot', this)">Rework</button>
+                    <button class="filter-btn" onclick="filterStatus('upd', this)">Updated</button>
+                    <button class="filter-btn" onclick="filterStatus('Outdated', this)">Outdated</button>
+                </div>
+
+                <div class="filter-group">
+                    <button class="filter-btn active" onclick="filterLane('all', this)">
+                        ALL Lanes
+                    </button>
+
+                    <button class="filter-btn" onclick="filterLane('top', this)">
+                        <img src="assets/roles/top.png" class="filter-icon" alt="">
+                        TOP
+                    </button>
+
+                    <button class="filter-btn" onclick="filterLane('jg', this)">
+                        <img src="assets/roles/jungle.png" class="filter-icon" alt="">
+                        JUNGLE
+                    </button>
+
+                    <button class="filter-btn" onclick="filterLane('mid', this)">
+                        <img src="assets/roles/mid.png" class="filter-icon" alt="">
+                        MID
+                    </button>
+
+                    <button class="filter-btn" onclick="filterLane('adc', this)">
+                        <img src="assets/roles/adc.png" class="filter-icon" alt="">
+                        ADC
+                    </button>
+
+                    <button class="filter-btn" onclick="filterLane('sup', this)">
+                        <img src="assets/roles/support.png" class="filter-icon" alt="">
+                        SUP
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="scroll-content">  
+            <div class="role-section" id="top">
+            <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">
+                        <img src="assets/roles/top.png" class="role-icon" alt="Top">
+                        TOP
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="champ-grid" id="grid-top"></div>
+            </div>
+
+            <div class="role-section" id="jg">
+            <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">
+                        <img src="assets/roles/jungle.png" class="role-icon" alt="Jungle">
+                        JUNGLE
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="champ-grid" id="grid-jg"></div>
+            </div>
+
+            <div class="role-section" id="mid">
+                <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">
+                    <img src="assets/roles/mid.png" class="role-icon" alt="Mid">
+                    MID
+                </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="champ-grid" id="grid-mid"></div>
+            </div>
+
+            <div class="role-section" id="adc">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">
+                        <img src="assets/roles/adc.png" class="role-icon" alt="ADC">
+                        ADC
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="champ-grid" id="grid-adc"></div>
+            </div>
+
+            <div class="role-section" id="sup">
+                <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">
+                        <img src="assets/roles/support.png" class="role-icon" alt="Support">
+                        SUP
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="champ-grid" id="grid-sup"></div>
+            </div>
+        </main>
+
+    </div>
+
+    <div id="changelogModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-header">
+                <img id="modalChampImg" src="" alt="">
+                <h2 id="modalTitle">CHAMPION NAME</h2>
+            </div>
+
+            <div class="modal-body" id="modalList">
+                </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
