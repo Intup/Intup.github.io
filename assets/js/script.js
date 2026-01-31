@@ -237,10 +237,14 @@ async function renderChampions() {
                     if (champ.status === 'soon') badgeHTML = '<span class="badge soon">SOON</span>';
                     if (champ.status === 'Outdated') badgeHTML = '<span class="badge hot">Outdated</span>';
 
-                    return `
+                   return `
                         <div class="champ-card" data-name="${champ.name}" data-status="${champ.status || 'normal'}">
                             ${badgeHTML}
-                            <img src="https://ddragon.leagueoflegends.com/cdn/${currentLolPatch}/img/champion/${champ.name}.png" class="champ-img" alt="${champ.name}">
+                            
+                            <div class="img-container spin-target">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/${currentLolPatch}/img/champion/${champ.name}.png" class="champ-img" alt="${champ.name}">
+                            </div>
+
                             <div class="champ-name">${champ.name}</div>
                         </div>
                     `;

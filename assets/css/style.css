@@ -223,20 +223,23 @@ h1 span { color: var(--blue-accent); }
 }
 
 .champ-card {
-    background-color: var(--bg-card);
-    border-radius: 6px;
-    padding: 8px;
+    background-color: #2a2a2e; /* Cinza premium */
+    border-radius: 12px;
+    padding: 10px;
     text-align: center;
-    border: 1px solid transparent;
+    border: 1px solid #404040;
     transition: all 0.3s ease;
     position: relative;
     cursor: pointer;
+ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 
 .champ-card:hover {
     border-color: var(--gold-primary);
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .champ-img {
@@ -718,6 +721,88 @@ h1 span { color: var(--blue-accent); }
     opacity: 0;
     animation: popCardRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* --- style.css --- */
+
+/* Melhoria no visual do Card */
+.champion-card {
+    /* Define um tom de cinza mais "premium", ligeiramente mais claro que o fundo preto, 
+       com um toque sutil de azul/marrom para não ficar um cinza morto */
+    background-color: #2a2a2e; 
+    
+    /* Adiciona uma borda fina para definir os limites do card */
+    border: 1px solid #404040;
+
+    /* Adiciona sombra para dar profundidade (o card parece "flutuar" levemente) */
+    /* A primeira sombra é difusa e escura, a segunda (inset) dá uma leve profundidade interna */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.05);
+
+    /* Garante cantos arredondados suaves */
+    border-radius: 12px;
+    
+    /* (Opcional) Suaviza a transição para o efeito de hover */
+    transition: all 0.3s ease;
+
+    /* ... Mantenha as outras propriedades de layout existentes (display: flex, padding, etc.) ... */
+}
+
+/* (Opcional) Efeito ao passar o mouse para destacar mais o card */
+.champion-card:hover {
+    transform: translateY(-3px); /* Move ligeiramente para cima */
+    border-color: var(--gold-primary); /* A borda fica dourada */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* A sombra aumenta */
+}
+
+/* --- ANIMAÇÃO DE BORDA GIRATÓRIA (UPDATED/NEW) --- */
+
+@keyframes spin-worm {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Container da imagem para segurar a animação */
+.img-container {
+    position: relative;
+    display: inline-block;
+    padding: 4px; /* Espaço para o anel girar */
+    border-radius: 50%;
+    z-index: 1;
+    margin-bottom: 8px;
+}
+
+/* Garante que a imagem fique redonda e sobreponha o fundo */
+.img-container .champ-img {
+    display: block;
+    width: 100%; 
+    border-radius: 50%;
+    position: relative;
+    z-index: 2; /* Fica na frente da animação */
+    margin-bottom: 0; /* Remove a margem antiga da imagem */
+}
+
+/* A MÁGICA: Só ativa se tiver badge 'new' ou 'upd' */
+.champ-card:has(.badge.new) .img-container::before,
+.champ-card:has(.badge.upd) .img-container::before {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    border-radius: 50%;
+    z-index: -1; 
+    
+    /* Gradiente Prata e Marrom */
+    background: conic-gradient(
+        transparent 0deg,
+        transparent 60deg,
+        #8c7d70 60deg,   /* Bronze/Marrom */
+        #e0e0e0 180deg,  /* Prata Brilhante */
+        #8c7d70 300deg,  /* Bronze/Marrom */
+        transparent 360deg
+    );
+    
+    animation: spin-worm 2s linear infinite;
+}
+
 
 /* Animações */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
