@@ -770,37 +770,35 @@ h1 span { color: var(--blue-accent); }
     z-index: 1;
     margin-bottom: 8px;
 }
-
-/* Garante que a imagem fique redonda e sobreponha o fundo */
+ 
 .img-container .champ-img {
     display: block;
     width: 100%; 
     border-radius: 50%;
     position: relative;
-    z-index: 2; /* Fica na frente da animação */
-    margin-bottom: 0; /* Remove a margem antiga da imagem */
+    z-index: 2;  
+    margin-bottom: 0;  
 }
 
-/* A MÁGICA: Só ativa se tiver badge 'new' ou 'upd' */
+ 
 .champ-card:has(.badge.new) .img-container::before,
 .champ-card:has(.badge.upd) .img-container::before {
     content: '';
     position: absolute;
     inset: 0; 
-    border-radius: 50%;
+    border-radius: 100%;
     z-index: -1; 
     
-    /* Gradiente Prata e Marrom */
-    background: conic-gradient(
+ 
+   background: conic-gradient(
         transparent 0deg,
-        transparent 60deg,
-        #8c7d70 60deg,   /* Bronze/Marrom */
-        #e0e0e0 180deg,  /* Prata Brilhante */
-        #8c7d70 300deg,  /* Bronze/Marrom */
-        transparent 360deg
+        transparent 260deg,   
+        #8c7d70 180deg,       
+        #e0e0e0 270deg,       
+        #8c7d70 360deg        
     );
     
-    animation: spin-worm 2s linear infinite;
+    animation: spin-worm 3s linear infinite;
 }
 
 
