@@ -433,6 +433,14 @@
       "New options for 'Range' and 'Prediction' (Misc. > Range | Misc. > Prediction)",
       "Improvements in prediction."
     ]
+  },
+
+    {
+    "date": "2/1/2026",
+    "version": "0.2",
+    "changes": [
+      "Fixed some bugs."
+    ]
   }
 ],
 
