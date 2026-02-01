@@ -402,36 +402,116 @@ h1 span { color: var(--blue-accent); }
     }
 }
 
+/* --- MODAL COM ANIMAÇÃO EXTRAORDINÁRIA --- */
+
 .modal-overlay {
-    display: none;  
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(1, 10, 19, 0.6);  
-    backdrop-filter: blur(8px);  
+    /* Fundo mais escuro e com muito blur para foco total */
+    background-color: rgba(1, 10, 19, 0.85);
+    backdrop-filter: blur(12px); 
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.3s ease;
+    /* Animação suave da entrada do fundo */
+    animation: backdropFadeIn 0.4s ease forwards;
 }
 
 .modal-content {
     background-color: var(--bg-panel);
     width: 90%;
     max-width: 600px;
+    
+     
     border: 1px solid var(--border-gold);
     border-top: 4px solid var(--gold-primary);
-    border-radius: 8px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    border-radius: 12px;
+    
     position: relative;
     padding: 0;
-    max-height: 80vh;  
-    overflow-y: auto;  
+    max-height: 80vh;
+    overflow-y: auto;
+
+  
+    box-shadow: 0 0 0 1px rgba(200, 170, 110, 0.2), 
+                0 20px 60px rgba(0, 0, 0, 0.8);
+
+ 
+    transform-origin: center center;
+    
+    opacity: 0; 
+}
+ 
+.modal-content.animate-entry {
+    animation: cyberPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
  
+.modal-header {
+    padding: 30px;
+ 
+    background: linear-gradient(180deg, rgba(200, 170, 110, 0.1) 0%, rgba(10, 20, 40, 0) 100%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-dim);
+    position: relative;
+    overflow: hidden;
+}
+ 
+.modal-header::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shine-swipe 1s ease 0.3s forwards; 
+}
+
+ 
+#modalChampImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 0 20px rgba(200, 170, 110, 0.3);
+    object-fit: cover;
+    z-index: 2;
+}
+ 
+@keyframes backdropFadeIn {
+    from { opacity: 0; backdrop-filter: blur(0px); }
+    to { opacity: 1; backdrop-filter: blur(12px); }
+}
+ 
+@keyframes cyberPop {
+    0% { 
+        opacity: 0;
+        transform: scale(0.6) translateY(30px);
+        filter: blur(10px);
+    }
+    60% {
+     
+        transform: scale(1.05) translateY(0px); 
+        filter: blur(0px);
+        box-shadow: 0 0 50px rgba(200, 170, 110, 0.6);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    }
+}
+ 
+@keyframes shine-swipe {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
 .close-modal {
     position: absolute;
     top: 10px;
@@ -445,16 +525,16 @@ h1 span { color: var(--blue-accent); }
 }
 .close-modal:hover { color: var(--gold-primary); }
 
-.modal-header {
+/* .modal-header {
     padding: 30px;
     background: linear-gradient(to bottom, rgba(200, 170, 110, 0.05), transparent);
     display: flex;
     align-items: center;
     gap: 20px;
     border-bottom: 1px solid var(--border-dim);
-}
+} */
 
-#modalChampImg {
+/* #modalChampImg {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -466,11 +546,11 @@ h1 span { color: var(--blue-accent); }
     font-size: 2rem;
 }
 
-.modal-body {
+  */
+
+ .modal-body {
     padding: 30px;
 }
-
- 
 .log-entry {
     margin-bottom: 25px;
     border-left: 3px solid var(--blue-dim);
@@ -722,50 +802,34 @@ h1 span { color: var(--blue-accent); }
     animation: popCardRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* --- style.css --- */
-
-/* Melhoria no visual do Card */
 .champion-card {
-    /* Define um tom de cinza mais "premium", ligeiramente mais claro que o fundo preto, 
-       com um toque sutil de azul/marrom para não ficar um cinza morto */
     background-color: #2a2a2e; 
-    
-    /* Adiciona uma borda fina para definir os limites do card */
     border: 1px solid #404040;
-
-    /* Adiciona sombra para dar profundidade (o card parece "flutuar" levemente) */
-    /* A primeira sombra é difusa e escura, a segunda (inset) dá uma leve profundidade interna */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 
                 inset 0 1px 1px rgba(255, 255, 255, 0.05);
 
-    /* Garante cantos arredondados suaves */
+  
     border-radius: 12px;
-    
-    /* (Opcional) Suaviza a transição para o efeito de hover */
     transition: all 0.3s ease;
-
-    /* ... Mantenha as outras propriedades de layout existentes (display: flex, padding, etc.) ... */
 }
 
-/* (Opcional) Efeito ao passar o mouse para destacar mais o card */
+
 .champion-card:hover {
     transform: translateY(-3px); /* Move ligeiramente para cima */
     border-color: var(--gold-primary); /* A borda fica dourada */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* A sombra aumenta */
 }
-
-/* --- ANIMAÇÃO DE BORDA GIRATÓRIA (UPDATED/NEW) --- */
+ 
 
 @keyframes spin-worm {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-/* Container da imagem para segurar a animação */
+ 
 .img-container {
     position: relative;
     display: inline-block;
-    padding: 4px; /* Espaço para o anel girar */
+    padding: 4px; 
     border-radius: 50%;
     z-index: 1;
     margin-bottom: 8px;

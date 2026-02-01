@@ -151,16 +151,25 @@ async function loadChangelogs() {
 
 function openModal(champName, imgUrl) {
     const modal = document.getElementById('changelogModal');
+    const modalContent = modal.querySelector('.modal-content'); 
+    
     const title = document.getElementById('modalTitle');
     const img = document.getElementById('modalChampImg');
     const listContainer = document.getElementById('modalList');
+
+    modalContent.classList.remove('animate-entry');
+    
+  
+    void modalContent.offsetWidth; 
+
     title.innerText = champName;
     img.src = imgUrl;
     listContainer.innerHTML = '';
 
     if (changelogData[champName]) {
+       
         changelogData[champName].forEach(log => {
-            let changesHtml = '';
+             let changesHtml = '';
             log.changes.forEach(change => {
                 changesHtml += `<li>${change}</li>`;
             });
@@ -186,7 +195,9 @@ function openModal(champName, imgUrl) {
             </div>
         `;
     }
+  
     modal.style.display = 'flex';
+    modalContent.classList.add('animate-entry');
 }
 
 function closeModal() {
